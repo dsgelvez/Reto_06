@@ -13,11 +13,11 @@
 ## Diagrama 1: Números con sus cuadrados
 ```mermaid
 flowchart TD
-    A[Inicio] --> B[Inicializar numero = 1]
-    B --> C{"numero <= 100?"}
-    C -->|Sí| D[calcular cuadrado = numero²]
-    D --> E[Imprimir numero y cuadrado]
-    E --> F[numero = numero + 1]
+    A[Inicio] --> B[Inicializar n = 1]
+    B --> C{"n <= 100?"}
+    C -->|Sí| D[calcular cuadrado = n²]
+    D --> E[Imprimir n y cuadrado]
+    E --> F[n = n + 1]
     F --> C
     C -->|No| G[Fin]
 ```
@@ -25,16 +25,16 @@ flowchart TD
 ```mermaid
 flowchart TD
     A[Inicio] --> B["Imprimir 'Números impares 1-999'"]
-    B --> C[Inicializar numero = 1]
-    C --> D{"numero < 1000?"}
-    D -->|Sí| E[Imprimir numero]
-    E --> F[numero = numero + 2]
+    B --> C[Inicializar n = 1]
+    C --> D{"n < 1000?"}
+    D -->|Sí| E[Imprimir n]
+    E --> F[n = n + 2]
     F --> D
     D -->|No| G["Imprimir 'Números pares 2-1000'"]
-    G --> H[Inicializar numero = 2]
-    H --> I{"numero <= 1000?"}
-    I -->|Sí| J[Imprimir numero]
-    J --> K[numero = numero + 2]
+    G --> H[Inicializar n = 2]
+    H --> I{"n <= 1000?"}
+    I -->|Sí| J[Imprimir n]
+    J --> K[n = n + 2]
     K --> I
     I -->|No| L[Fin]
 ```
