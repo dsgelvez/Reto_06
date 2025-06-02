@@ -13,41 +13,46 @@
 ## Diagrama 1: Números con sus cuadrados
 ```mermaid
 flowchart TD
-    A[Inicio] --> B[i = 1]
-    B --> C{"i <= 100?"}
-    C -->|Sí| D[Imprimir i y i²]
-    D --> E[i = i + 1]
-    E --> C
-    C -->|No| F[Fin]
+    A[Inicio] --> B[Inicializar numero = 1]
+    B --> C{"numero <= 100?"}
+    C -->|Sí| D[calcular cuadrado = numero²]
+    D --> E[Imprimir numero y cuadrado]
+    E --> F[numero = numero + 1]
+    F --> C
+    C -->|No| G[Fin]
 ```
 ## Diagrama 2: Números impares y pares
 ```mermaid
 flowchart TD
-    A[Inicio] --> B["Imprimir 'Impares 1-999'"]
-    B --> C[i = 1]
-    C --> D{"i <= 999?"}
-    D -->|Sí| E[Imprimir i]
-    E --> F[i = i + 2]
+    A[Inicio] --> B["Imprimir 'Números impares 1-999'"]
+    B --> C[Inicializar numero = 1]
+    C --> D{"numero < 1000?"}
+    D -->|Sí| E[Imprimir numero]
+    E --> F[numero = numero + 2]
     F --> D
-    D -->|No| G["Imprimir 'Pares 2-1000'"]
-    G --> H[j = 2]
-    H --> I{"j <= 1000?"}
-    I -->|Sí| J[Imprimir j]
-    J --> K[j = j + 2]
+    D -->|No| G["Imprimir 'Números pares 2-1000'"]
+    G --> H[Inicializar numero = 2]
+    H --> I{"numero <= 1000?"}
+    I -->|Sí| J[Imprimir numero]
+    J --> K[numero = numero + 2]
     K --> I
     I -->|No| L[Fin]
 ```
 ## Diagrama 3: Números pares descendentes
 ```mermaid
 flowchart TD
-    A[Inicio] --> B["Leer n (n >= 2)"]
+    A[Inicio] --> B[Leer n]
     B --> C{"n >= 2?"}
-    C -->|No| D["Mostrar error"] --> E[Fin]
-    C -->|Sí| F{"n es par?"}
-    F -->|No| G[n = n - 1] --> H
-    F -->|Sí| H[Imprimir n]
-    H --> I[n = n - 2]
-    I --> J{"n >= 2?"}
-    J -->|Sí| H
-    J -->|No| E[Fin]
+    C -->|No| D["Imprimir 'Error: n debe ser ≥ 2'"]
+    D --> E[Fin]
+    C -->|Sí| F{"n es impar?"}
+    F -->|Sí| G[n = n - 1]
+    G --> H
+    F -->|No| H["Imprimir 'Números pares descendentes desde n hasta 2'"]
+    H --> I[Inicializar numero = n]
+    I --> J{"numero >= 2?"}
+    J -->|Sí| K[Imprimir numero]
+    K --> L[numero = numero - 2]
+    L --> J
+    J -->|No| M[Fin]
 ```
