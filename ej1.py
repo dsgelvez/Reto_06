@@ -1,3 +1,3 @@
-for numero in range(1, 101):
-    cuadrado = numero ** 2
-    print(f"Número: {numero}, Cuadrado: {cuadrado}")
+for n in range(1, 101):
+    cuadrado = n ** 2
+    print(f"Número: {n}, Cuadrado: {cuadrado}")
